@@ -32,21 +32,6 @@ main {
   margin-bottom: 40px;
 }
 
-.questionnaire-link {
-  font-size: 25px;
-  background-color: #ffbc03;
-  color: #000;
-  border: 1px solid #ffbc03;
-  text-align: center;
-  padding: 15px;
-  border-radius: 10px;
-}
-
-.questionnaire-link:hover,
-.questionnaire-link:focus {
-  color: #038cff;
-}
-
 /*Services*/
 
 .services-main-title {

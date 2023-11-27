@@ -47,39 +47,13 @@ main {
   font-size: 15px;
 }
 
-/*.gift-packaging {
-  text-align: center;
-  color: #ffbc03;
-  font-size: 22px;
-  text-shadow: -1px -1px 0 #053053, 1px -1px 0 #053053, -1px 1px 0 #053053,
-    1px 1px 0 #053053;
-}
-
-.gift-packaging-box {
-  text-align: center;
-  color: #038cff;
-  font-size: 20px;
-}
-
-.gift-packaging-ribbon {
-  text-align: center;
-  color: #038cff;
-  font-size: 20px;
-}*/
-
 .gift-additional {
   text-align: center;
   color: #ffbc03;
   font-size: 18px;
 }
 
-.gift-buttons {
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-}
-
-.gift-selected {
+.order-button {
   text-align: center;
   background-color: #038cff;
   border-color: #053053;
@@ -90,23 +64,7 @@ main {
   border-radius: 10px;
 }
 
-.gift-selected:hover,
-.gift-selected:focus {
+.order-button:hover,
+.order-button:focus {
   background-color: #053053;
-}
-
-.gift-basket {
-  text-align: center;
-  background-color: #ebed4d;
-  border-color: #ffbc03;
-  color: #038cff;
-  font-size: 18px;
-  padding: 8px;
-  cursor: pointer;
-  border-radius: 10px;
-}
-
-.gift-basket:hover,
-.gift-basket:focus {
-  background-color: #ffbc03;
 }

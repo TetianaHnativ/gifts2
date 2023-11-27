@@ -22,11 +22,6 @@
     margin-top: 0px;
   }
 
-  .gift-buttons {
-    flex-direction: column;
-    gap: 15px;
-  }
-
   .gift-name {
     font-size: 22px;
   }
@@ -47,17 +42,7 @@
     font-size: 15px;
   }
 
-  .gift-buttons {
-    flex-direction: column;
-    gap: 15px;
-  }
-
-  .gift-selected {
-    font-size: 15px;
-    padding: 5px;
-  }
-
-  .gift-basket {
+  .order-button {
     font-size: 15px;
     padding: 5px;
   }
