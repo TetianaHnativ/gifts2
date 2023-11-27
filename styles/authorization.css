@@ -1,0 +1,51 @@
+main {
+  background-image: url(../imgs/Ukrainian-flag-img.jpg);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.authorization {
+  background-color: #ffbe03;
+  max-width: 400px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  gap: 40px;
+  padding: 50px;
+  border: 5px outset #ffbe03;
+  border-radius: 10px;
+}
+
+.authorization-title {
+  font-size: 30px;
+  color: #053053;
+}
+
+.authorization-parameter {
+  font-size: 20px;
+  text-align: center;
+  padding: 5px;
+}
+
+.authorization-button {
+  font-size: 25px;
+  text-align: center;
+  background-color: #053053;
+  color: #fff;
+  border-color:#053053;
+}
+
+.registration-question {
+  font-size: 18px;
+  align-items: center;
+}
+
+.registration-link {
+  color: #038cff;
+}

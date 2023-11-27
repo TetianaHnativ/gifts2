@@ -1,0 +1,76 @@
+header {
+  min-height: 80px;
+  background-color: #fff;
+  display: flex;
+  gap: 15%;
+  align-items: center;
+  justify-content: space-evenly;
+  padding: 0 30px;
+}
+
+.logo {
+  font-family: "Raleway", sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 25px;
+  text-align: center;
+  color: #ffbe03;
+}
+
+.logo-title-part2 {
+  color: #038cff;
+}
+
+.logo-icon {
+  max-width: 30px;
+}
+
+.main-link {
+  color: #ffbe03;
+}
+
+.main-link:hover,
+.main-link:focus {
+  color: #038cff;
+}
+
+.shop-link {
+  color: #038cff;
+}
+
+.shop-link:hover,
+.shop-link:focus {
+  color: #ffbe03;
+}
+
+.idea-link {
+  color: #ffbe03;
+}
+
+.idea-link:hover,
+.idea-link:focus {
+  color: #038cff;
+}
+
+.login-link {
+  background-color: #038cff;
+  color: #fff;
+  border: 1px solid #038cff;
+  padding: 8px;
+  border-radius: 10px;
+}
+
+.login-link:hover,
+.login-link:focus {
+  color: #ffbe03;
+}
+
+.header-links-list {
+  display: flex;
+  gap: 20px;
+}
+
+.header-links-item {
+  text-align: center;
+  align-items: center;
+}

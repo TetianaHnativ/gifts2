@@ -1,0 +1,49 @@
+@media (max-width: 1000px) {
+  /*Hero*/
+  .img-hero-container {
+    min-width: 500px;
+  }
+
+  /*Services*/
+  .services-list {
+    flex-direction: column;
+    gap: 30px;
+    align-items: center;
+  }
+}
+
+@media (max-width: 500px) {
+  /*Hero*/
+  .img-hero-container {
+    min-width: 200px;
+  }
+
+  .hero-title {
+    font-size: 25px;
+  }
+
+  .questionnaire-link {
+    font-size: 15px;
+    padding: 10px;
+    border-radius: 10px;
+  }
+
+  /*Services*/
+  .services-main-title {
+    font-size: 20px;
+  }
+
+  .services-img {
+    max-width: 200px;
+    height: 180px;
+  }
+
+  .services-title {
+    font-size: 18px;
+  }
+
+  .services-paragraph {
+    max-width: 200px;
+    font-size: 15px;
+  }
+}

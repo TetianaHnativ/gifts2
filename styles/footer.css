@@ -1,0 +1,75 @@
+footer {
+  min-height: 80px;
+  background-color: #ebed4d;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.address h3 {
+  font-size: 20px;
+  text-align: center;
+  margin-bottom: 10px;
+  letter-spacing: 1px;
+  color: #053053;
+}
+
+address a {
+  color: #038cff;
+  text-align: center;
+  display: inline-block;
+}
+
+address a:hover,
+address a:focus {
+  color: #000;
+}
+
+.contacts h3 {
+  font-size: 20px;
+  text-align: center;
+  margin-bottom: 10px;
+  letter-spacing: 1px;
+  color: #053053;
+}
+
+.contacts-list {
+  display: flex;
+  gap: 20px;
+}
+
+.contacts-list-item {
+  color: #038cff;
+}
+
+.contacts-list-item a {
+  color: #038cff;
+}
+
+.contacts-list-item a:hover,
+.contacts-list-item a:focus {
+  color: #000;
+}
+
+.social-networks h3 {
+  font-size: 20px;
+  text-align: center;
+  margin-bottom: 10px;
+  letter-spacing: 1px;
+  color: #053053;
+}
+
+.social-networks-list {
+  display: flex;
+  gap: 20px;
+}
+
+.fab {
+  font-size: 20px;
+  color: #038cff;
+}
+
+.fab:hover,
+.fab:focus {
+  color: #000;
+}

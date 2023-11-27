@@ -1,0 +1,25 @@
+@media (max-width: 500px) {
+  .registration {
+    gap: 20px;
+    padding: 10px;
+  }
+
+  .registration-title {
+    font-size: 15px;
+  }
+
+  .registration-parameter {
+    font-size: 12px;
+    text-align: center;
+    padding: 5px;
+  }
+
+  .registration-button {
+    font-size: 15px;
+  }
+
+  .authorization-question {
+    font-size: 12px;
+    align-items: center;
+  }
+}

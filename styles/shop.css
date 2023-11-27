@@ -1,0 +1,125 @@
+main {
+  min-height: 100vh;
+}
+
+.shop-button {
+  font-size: 18px;
+  text-align: center;
+  background-color: #ebed4d;
+  color: #038cff;
+  border-color: #ffbc03;
+  border-radius: 4px;
+  padding: 5px 15px;
+  cursor: pointer;
+  border-radius: 10px;
+}
+
+.shop-button:hover,
+.shop-button:focus {
+  background-color: #ffbc03;
+}
+
+.buttons-list {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  flex-wrap: wrap;
+  padding-top: 20px;
+}
+
+.sort-search-container {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 30px;
+}
+
+.search {
+  font-size: 16px;
+  text-align: center;
+  background-color: #ffbc03;
+  color: #000;
+  padding: 5px;
+  border-color: #ffbc03;
+  min-width: 300px;
+  margin-right: 5px;
+}
+
+.search::placeholder {
+  color: #000;
+  letter-spacing: 1px;
+}
+
+.search-button {
+  font-size: 16px;
+  font-weight: 600;
+  text-align: center;
+  padding: 5px 10px;
+
+  background-color: #ffbc03;
+  color: #000;
+  border-color: #ffbc03;
+  cursor: pointer;
+  letter-spacing: 1px;
+  border-radius: 5px;
+}
+
+.search-button:focus,
+.search-button:hover {
+  background-color: #038cff;
+  color: #fff;
+  border-color: #038cff;
+}
+
+.sort-list {
+  font-size: 14px;
+  text-align: center;
+  background-color: #ffbc03;
+  color: #000;
+  border-radius: 8px;
+  cursor: pointer;
+  padding: 5px;
+}
+
+.gifts-list {
+  display: flex;
+  gap: 30px;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+.gifts-list-item {
+  border: 1px solid #038cff;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  padding-bottom: 5px;
+  max-width: 300px;
+  border-radius: 10px;
+}
+
+.gift-img {
+  width: 300px;
+  height: 300px;
+}
+
+.gift-name {
+  text-align: center;
+  color: #ffbc03;
+  font-size: 18px;
+  text-shadow: -1px -1px 0 #053053, 1px -1px 0 #053053, -1px 1px 0 #053053,
+    1px 1px 0 #053053;
+}
+
+.gift-category {
+  text-align: center;
+  color: #038cff;
+  font-size: 18px;
+}
+
+.gift-price {
+  text-align: center;
+  color: #ffbc03;
+  font-size: 18px;
+}

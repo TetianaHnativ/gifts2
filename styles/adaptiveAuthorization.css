@@ -1,0 +1,25 @@
+@media (max-width: 500px) {
+  .authorization {
+    gap: 20px;
+    padding: 10px;
+  }
+
+  .authorization-title {
+    font-size: 15px;
+  }
+
+  .authorization-parameter {
+    font-size: 12px;
+    text-align: center;
+    padding: 5px;
+  }
+
+  .authorization-button {
+    font-size: 15px;
+  }
+
+  .registration-question {
+    font-size: 12px;
+    align-items: center;
+  }
+}

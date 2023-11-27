@@ -1,0 +1,64 @@
+@media (max-width: 700px) {
+  main {
+    flex-direction: column;
+    gap: 20px;
+    padding: 50px 0px;
+  }
+  .gift-img {
+    width: 300px;
+    height: 300px;
+    margin-left: 0px;
+  }
+}
+
+@media (max-width: 500px) {
+  main {
+    padding: 0px;
+  }
+
+  .gift-img {
+    width: 200px;
+    height: 200px;
+    margin-top: 0px;
+  }
+
+  .gift-buttons {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .gift-name {
+    font-size: 22px;
+  }
+
+  .gift-category {
+    font-size: 15px;
+  }
+
+  .gift-price {
+    font-size: 18px;
+  }
+
+  .gift-availability {
+    font-size: 12px;
+  }
+
+  .gift-additional {
+    font-size: 15px;
+  }
+
+  .gift-buttons {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .gift-selected {
+    font-size: 15px;
+    padding: 5px;
+  }
+
+  .gift-basket {
+    font-size: 15px;
+    padding: 5px;
+  }
+}

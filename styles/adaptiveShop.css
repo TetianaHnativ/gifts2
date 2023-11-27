@@ -1,0 +1,65 @@
+@media (max-width: 700px) {
+  .search {
+    font-size: 14px;
+    min-width: 150px;
+  }
+  .search-button {
+    font-size: 14px;
+    padding: 5px 2px;
+  }
+
+  .sort-list {
+    font-size: 14px;
+    padding: 5px 2px;
+  }
+}
+
+@media (max-width: 500px) {
+  .gifts-list-item {
+    max-width: 200px;
+  }
+
+  .gift-img {
+    width: 200px;
+    height: 200px;
+  }
+
+  .gift-name {
+    font-size: 16px;
+  }
+
+  .gift-category {
+    font-size: 16px;
+  }
+
+  .gift-price {
+    font-size: 16px;
+  }
+
+  .sort-search-container {
+    flex-direction: column;
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .search-container {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .search {
+    font-size: 12px;
+    min-width: 180px;
+  }
+  .search-button {
+    font-size: 12px;
+  }
+
+  .sort-list {
+    font-size: 10px;
+  }
+}
