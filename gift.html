@@ -124,5 +124,60 @@
         </div>
       </footer>
     </div>
+
+    <!--Modal form-->
+      <div class="modal-form-container">
+          <button class="close-button">x</button>
+          <form class="modal-form" id="form-modal">
+
+              <h3 class="modal-form-title">Оформлення замвовлення</h3>
+
+              <ul class="modal-form-list">
+                  <li class="modal-form-field">
+                      <label for="name" class="modal-field-name">Ім'я</label>
+                      <div class="input-icons">
+                          <i class="material-icons">person</i>
+                          <input type="text" class="modal-field-input" id="name" name="Ім'я" required>
+                      </div>
+                  </li>
+
+                  <li class="modal-form-field">
+                      <label for="phone" class="modal-field-name">Телефон</label>
+                      <div class="input-icons">
+                          <i class="material-icons">call</i>
+                          <input type="text" class="modal-field-input" id="phone" name="Телефон" required>
+                      </div>
+                  </li>
+
+                  <li class="modal-form-field">
+                      <label for="email" class="modal-field-name">Пошта</label>
+                      <div class="input-icons">
+                          <i class="material-icons">mail</i>
+                           
+                              <input type="email" class="modal-field-input" id="email" name="Пошта" required>
+                          
+                      </div>
+                  </li>
+
+                  <li class="modal-form-field">
+                      <label for="comment" class="modal-field-name">Коментар</label>
+                      <input type="text" class="modal-field-input" id="comment" name="Коментар">
+                  </li>
+              </ul>
+
+              <button type="submit" class="modal-form-button" id="contact-send-button">Відправити</button>
+          </form>
+
+      </div>
+  </div>
+
+  <!--<div class="modal-form" id="success-modal">
+
+      <div class="modal-form modal-form-container">
+          <button class="close-button">x</button>
+          <h3 class="modal-form-title">Дякуємо за замовлення!</h3>
+      </div>
+
+  </div>-->
   </body>
 </html>

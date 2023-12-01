@@ -68,3 +68,26 @@ main {
 .order-button:focus {
   background-color: #053053;
 }
+
+/*Modal form*/
+.modal-form-container {
+  position: fixed;
+  top: 50%;
+  
+  max-width: 500px;
+  background: #ebed4d;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 40px;
+}
+.modal-form {
+  position: relative;
+  
+}
+
+.form-modal {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
