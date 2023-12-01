@@ -81,6 +81,8 @@ main {
   display: flex;
   align-items: center;
   justify-content: center;
+
+  display: none;
 }
 
 .modal-form {
@@ -89,7 +91,7 @@ main {
 
   padding: 20px;
   text-align: center;
-  min-width: 500px;
+  min-width: 400px;
 
   display: flex;
   flex-direction: column;
