@@ -54,14 +54,14 @@
       </header>
       <main>
         <img
-          src="./imgs/bear-toy-img.jpg"
-          alt="Плюшевий ведмедик"
+          src=""
+          alt="Фото подарунку"
           class="gift-img"
         />
         <div class="gift-information">
-          <h3 class="gift-name">Плюшевий ведмедик</h3>
-          <p class="gift-category">Для дітей</p>
-          <p class="gift-price">500 грн.</p>
+          <h3 class="gift-name"></h3>
+          <p class="gift-category"></p>
+          <p class="gift-price"></p>
           <p class="gift-availability">У наявності</p>
           <p class="gift-additional">
             Оплата при доставці, доставка кур'єром за адресою (вказується при
@@ -127,7 +127,7 @@
 
     <!--Modal form-->
     <div class="modal-form-container" id="order-modal">
-      <form class="modal-form">
+      <form class="modal-form" id="order-form">
         <button class="close-button order-close">x</button>
 
         <h3 class="modal-form-title">Оформлення замовлення</h3>
@@ -138,28 +138,32 @@
             type="number"
             class="modal-field-number"
             id="number"
+            min="1"
+            max="100"
             required
           />
         </label>
 
         <p class="modal-price-text">
-          Всього: <span class="modal-price">500.00</span> грн.
+          Всього: <span class="modal-price"></span> грн.
         </p>
 
         <input
           type="text"
           class="modal-field-input"
+          id="address"
           placeholder="Введіть адресу доставки"
           required
         />
         <input
           type="text"
+          id="phone"
           class="modal-field-input"
           placeholder="Введіть номер телефону"
           required
         />
 
-        <button type="submit" class="modal-form-button">Оформити</button>
+        <button class="modal-form-button">Оформити</button>
       </form>
     </div>
 

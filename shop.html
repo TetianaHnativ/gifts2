@@ -54,157 +54,278 @@
       </header>
       <main>
         <ul class="buttons-list">
-          <li><button class="shop-button">Усі</button></li>
-          <li><button class="shop-button">Для дітей</button></li>
-          <li><button class="shop-button">Для жінок</button></li>
-          <li><button class="shop-button">Для чоловіків</button></li>
-          <li><button class="shop-button">Для літніх людей</button></li>
-          <li><button class="shop-button">Канцелярія</button></li>
-          <li><button class="shop-button">Техніка</button></li>
-          <li><button class="shop-button">Товари для дому</button></li>
-          <li><button class="shop-button">Свята</button></li>
+          <li>
+            <button class="shop-button" onclick="filterGifts('Усі')">
+              Усі
+            </button>
+          </li>
+          <li>
+            <button class="shop-button" onclick="filterGifts('Для дітей')">
+              Для дітей
+            </button>
+          </li>
+          <li>
+            <button class="shop-button" onclick="filterGifts('Для жінок')">
+              Для жінок
+            </button>
+          </li>
+          <li>
+            <button class="shop-button" onclick="filterGifts('Для чоловіків')">
+              Для чоловіків
+            </button>
+          </li>
+          <li>
+            <button
+              class="shop-button"
+              onclick="filterGifts('Для літніх людей')"
+            >
+              Для літніх людей
+            </button>
+          </li>
+          <li>
+            <button class="shop-button" onclick="filterGifts('Канцелярія')">
+              Канцелярія
+            </button>
+          </li>
+          <li>
+            <button class="shop-button" onclick="filterGifts('Техніка')">
+              Техніка
+            </button>
+          </li>
+          <li>
+            <button
+              class="shop-button"
+              onclick="filterGifts('Товари для дому')"
+            >
+              Товари для дому
+            </button>
+          </li>
+          <li>
+            <button class="shop-button" onclick="filterGifts('Свята')">
+              Свята
+            </button>
+          </li>
         </ul>
 
         <div class="sort-search-container">
           <div class="search-container">
             <input type="search" class="search" placeholder="Пошук по назві" />
-            <button type="submit" class="search-button">Пошук</button>
+            <button type="submit" class="search-button" onclick="searchGift()">
+              Пошук
+            </button>
           </div>
 
-          <select class="sort-list">
-            <option value="1" class="sort-option">
+          <select class="sort-list" onclick="sortGifts()">
+            <option value="ordinary" class="sort-option">
               Загальний порядок сортування
             </option>
-            <option value="2" class="sort-option">
+            <option value="cheap" class="sort-option">
               Від дешевих до дорогих
             </option>
-            <option value="3" class="sort-option">
+            <option value="expensive" class="sort-option">
               Від дорогих до дешевих
             </option>
           </select>
-       </div>
+        </div>
 
         <ul class="gifts-list">
-          <li class="gifts-list-item">
+          <li
+            class="gifts-list-item"
+            data-img="./imgs/bear-toy-img.jpg"
+            data-name="Плюшевий ведмедик"
+            data-category="Для дітей"
+            data-price="500 грн."
+          >
             <a href="./gift.html"
               ><img
                 src="./imgs/bear-toy-img.jpg"
                 alt="Плюшевий ведмедик"
                 class="gift-img"
-            /></a>
-            <h3 class="gift-name">Плюшевий ведмедик</h3>
-            <p class="gift-category">Для дітей</p>
-            <p class="gift-price">500 грн.</p>
+              />
+              <h3 class="gift-name">Плюшевий ведмедик</h3>
+              <p class="gift-category">Для дітей</p>
+              <p class="gift-price">500 грн.</p>
+            </a>
           </li>
-          <li class="gifts-list-item">
-            <a href="#"
+          <li
+            class="gifts-list-item"
+            data-img="./imgs/house-toy-img.jpg"
+            data-name="Ляльковий будиночок"
+            data-category="Для дітей"
+            data-price="800 грн."
+          >
+            <a href="./gift.html"
               ><img
                 src="./imgs/house-toy-img.jpg"
                 alt="Ляльковий будиночок"
                 class="gift-img"
-            /></a>
-            <h3 class="gift-name">Ляльковий будиночок</h3>
-            <p class="gift-category">Для дітей</p>
-            <p class="gift-price">800 грн.</p>
+              />
+              <h3 class="gift-name">Ляльковий будиночок</h3>
+              <p class="gift-category">Для дітей</p>
+              <p class="gift-price">800 грн.</p>
+            </a>
           </li>
-          <li class="gifts-list-item">
-            <a href="#"
+          <li
+            class="gifts-list-item"
+            data-img="./imgs/car-toy-img.jpg"
+            data-name="Іграшкова машинка"
+            data-category="Для дітей"
+            data-price="250 грн."
+          >
+            <a href="./gift.html"
               ><img
                 src="./imgs/car-toy-img.jpg"
                 alt="Іграшкова машинка"
                 class="gift-img"
-            /></a>
-            <h3 class="gift-name">Іграшкова машинка</h3>
-            <p class="gift-category">Для дітей</p>
-            <p class="gift-price">250 грн.</p>
+              />
+              <h3 class="gift-name">Іграшкова машинка</h3>
+              <p class="gift-category">Для дітей</p>
+              <p class="gift-price">250 грн.</p>
+            </a>
           </li>
-          <li class="gifts-list-item">
-            <a href="#"
+          <li
+            class="gifts-list-item"
+            data-img="./imgs/cube-toy-img.jpg"
+            data-name="Кубик Рубіка"
+            data-category="Для дітей"
+            data-price="200 грн."
+          >
+            <a href="./gift.html"
               ><img
                 src="./imgs/cube-toy-img.jpg"
                 alt="Кубик Рубіка"
                 class="gift-img"
-            /></a>
-            <h3 class="gift-name">Кубик Рубіка</h3>
-            <p class="gift-category">Для дітей</p>
-            <p class="gift-price">200 грн.</p>
+              />
+              <h3 class="gift-name">Кубик Рубіка</h3>
+              <p class="gift-category">Для дітей</p>
+              <p class="gift-price">200 грн.</p>
+            </a>
           </li>
-          <li class="gifts-list-item">
-            <a href="#"
+          <li
+            class="gifts-list-item"
+            data-img="./imgs/doll-toy-img.jpg"
+            data-name="Плюшева лялька"
+            data-category="Для дітей"
+            data-price="450 грн."
+          >
+            <a href="./gift.html"
               ><img
                 src="./imgs/doll-toy-img.jpg"
                 alt="Плюшева лялька"
                 class="gift-img"
-            /></a>
-            <h3 class="gift-name">Плюшева лялька</h3>
-            <p class="gift-category">Для дітей</p>
-            <p class="gift-price">450 грн.</p>
+              />
+              <h3 class="gift-name">Плюшева лялька</h3>
+              <p class="gift-category">Для дітей</p>
+              <p class="gift-price">450 грн.</p>
+            </a>
           </li>
-          <li class="gifts-list-item">
-            <a href="#"
+          <li
+            class="gifts-list-item"
+            data-img="./imgs/eyeshadow-woman-img.jpg"
+            data-name="Тіні для очей"
+            data-category="Для жінок"
+            data-price="150 грн."
+          >
+            <a href="./gift.html"
               ><img
                 src="./imgs/eyeshadow-woman-img.jpg"
                 alt="Тіні для очей"
                 class="gift-img"
-            /></a>
-            <h3 class="gift-name">Тіні для очей</h3>
-            <p class="gift-category">Для жінок</p>
-            <p class="gift-price">150 грн.</p>
+              />
+              <h3 class="gift-name">Тіні для очей</h3>
+              <p class="gift-category">Для жінок</p>
+              <p class="gift-price">150 грн.</p>
+            </a>
           </li>
-          <li class="gifts-list-item">
-            <a href="#"
+          <li
+            class="gifts-list-item"
+            data-img="./imgs/perfume-woman-img.jpg"
+            data-name="Парфуми"
+            data-category="Для жінок"
+            data-price="3000 грн."
+          >
+            <a href="./gift.html"
               ><img
                 src="./imgs/perfume-woman-img.jpg"
                 alt="Парфуми"
                 class="gift-img"
-            /></a>
-            <h3 class="gift-name">Парфуми</h3>
-            <p class="gift-category">Для жінок</p>
-            <p class="gift-price">3000 грн.</p>
+              />
+              <h3 class="gift-name">Парфуми</h3>
+              <p class="gift-category">Для жінок</p>
+              <p class="gift-price">3000 грн.</p>
+            </a>
           </li>
-          <li class="gifts-list-item">
-            <a href="#"
+          <li
+            class="gifts-list-item"
+            data-img="./imgs/powder-woman-img.jpg"
+            data-name="Пудра"
+            data-category="Для жінок"
+            data-price="300 грн."
+          >
+            <a href="./gift.html"
               ><img
                 src="./imgs/powder-woman-img.jpg"
                 alt="Пудра"
                 class="gift-img"
-            /></a>
-            <h3 class="gift-name">Пудра</h3>
-            <p class="gift-category">Для жінок</p>
-            <p class="gift-price">300 грн.</p>
+              />
+              <h3 class="gift-name">Пудра</h3>
+              <p class="gift-category">Для жінок</p>
+              <p class="gift-price">300 грн.</p>
+            </a>
           </li>
-          <li class="gifts-list-item">
-            <a href="#"
+          <li
+            class="gifts-list-item"
+            data-img="./imgs/mascara-woman-img.jpg"
+            data-name="Туш для вій"
+            data-category="Для жінок"
+            data-price="280 грн."
+          >
+            <a href="./gift.html"
               ><img
                 src="./imgs/mascara-woman-img.jpg"
                 alt="Туш для вій"
                 class="gift-img"
-            /></a>
-            <h3 class="gift-name">Туш для вій</h3>
-            <p class="gift-category">Для жінок</p>
-            <p class="gift-price">280 грн.</p>
+              />
+              <h3 class="gift-name">Туш для вій</h3>
+              <p class="gift-category">Для жінок</p>
+              <p class="gift-price">280 грн.</p>
+            </a>
           </li>
-          <li class="gifts-list-item">
-            <a href="#"
+          <li
+            class="gifts-list-item"
+            data-img="./imgs/earrings-jewellery-img.jpg"
+            data-name="Сережки підвіски - перлинки"
+            data-category="Для жінок"
+            data-price="1500 грн."
+          >
+            <a href="./gift.html"
               ><img
                 src="./imgs/earrings-jewellery-img.jpg"
                 alt="Сережки підвіски-перлинки"
                 class="gift-img"
-            /></a>
-            <h3 class="gift-name">Сережки підвіски - перлинки</h3>
-            <p class="gift-category">Для жінок</p>
-            <p class="gift-price">1500 грн.</p>
+              />
+              <h3 class="gift-name">Сережки підвіски - перлинки</h3>
+              <p class="gift-category">Для жінок</p>
+              <p class="gift-price">1500 грн.</p>
+            </a>
           </li>
-          <li class="gifts-list-item">
-            <a href="#"
+          <li
+            class="gifts-list-item"
+            data-img="./imgs/pendant-jewellery-img.jpg"
+            data-name="Кольє з підвіскою - зіркою"
+            data-category="Для жінок"
+            data-price="2000 грн."
+          >
+            <a href="./gift.html"
               ><img
                 src="./imgs/pendant-jewellery-img.jpg"
                 alt="Кольє з підвіскою-зіркою"
                 class="gift-img"
-            /></a>
-            <h3 class="gift-name">Кольє з підвіскою - зіркою</h3>
-            <p class="gift-category">Для жінок</p>
-            <p class="gift-price">2000 грн.</p>
+              />
+              <h3 class="gift-name">Кольє з підвіскою - зіркою</h3>
+              <p class="gift-category">Для жінок</p>
+              <p class="gift-price">2000 грн.</p>
+            </a>
           </li>
         </ul>
       </main>
