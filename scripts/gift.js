@@ -91,7 +91,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const phone = document.getElementById("phone").value;
     const giftName = document.querySelector(".gift-name").textContent;
 
-    if (number && address.length >= 5 && phone && phone.length >= 10) {
+    if (number && address.length >= 5 && phone.length >= 10) {
       let orderData = {
         name: giftName,
         number: number,

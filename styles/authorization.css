@@ -39,6 +39,7 @@ main {
   background-color: #053053;
   color: #fff;
   border-color:#053053;
+  cursor: pointer;
 }
 
 .registration-question {

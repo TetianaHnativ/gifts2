@@ -70,10 +70,12 @@
             required
           />
           <input
-            type="number"
+            type="tel"
             class="registration-parameter"
             id="phone"
             placeholder="Введіть номер телефону"
+            minlength="10"
+            maxlength="15"
             required
           />
           <input
@@ -88,6 +90,7 @@
             class="registration-parameter"
             id="password"
             placeholder="Введіть пароль"
+            minlength="8"
             required
           />
           <input
@@ -95,9 +98,11 @@
             class="registration-parameter"
             id="password-confirmation"
             placeholder="Підтвердьте пароль"
+            minlength="8"
             required
           />
-          <input type="submit" class="registration-button" value="Зареєструватися">
+          <p class="message"></p>
+          <button class="registration-button" >Зареєструватися</button>
           <p class="authorization-question">
             Вже зареєстровані?
             <a href="./authorization.html" class="authorization-link"
@@ -107,5 +112,6 @@
         </form>
       </main>
     </div>
+    <script src="./scripts/registration.js"></script>
   </body>
 </html>
