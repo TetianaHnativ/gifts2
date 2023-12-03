@@ -53,11 +53,7 @@
         <a href="authorization.html" class="login-link">Login</a>
       </header>
       <main>
-        <img
-          src=""
-          alt="Фото подарунку"
-          class="gift-img"
-        />
+        <img src="" alt="Фото подарунку" class="gift-img" />
         <div class="gift-information">
           <h3 class="gift-name"></h3>
           <p class="gift-category"></p>
@@ -127,44 +123,49 @@
 
     <!--Modal form-->
     <div class="modal-form-container" id="order-modal">
-      <form class="modal-form" id="order-form">
+      <div class="modal-form-container2">
         <button class="close-button order-close">x</button>
+        <form class="modal-form" id="order-form">
+          <h3 class="modal-form-title">Оформлення замовлення</h3>
 
-        <h3 class="modal-form-title">Оформлення замовлення</h3>
+          <label for="number" class="modal-label-number"
+            >Кількість подарунків:
+            <input
+              type="number"
+              class="modal-field-number"
+              id="number"
+              min="1"
+              max="100"
+              value="1"
+              required
+            />
+          </label>
 
-        <label for="number" class="modal-label-number"
-          >Кількість подарунків:
+          <p class="modal-price-text">
+            Всього: <span class="modal-price"></span> грн.
+          </p>
+
           <input
-            type="number"
-            class="modal-field-number"
-            id="number"
-            min="1"
-            max="100"
+            type="text"
+            class="modal-field-input"
+            id="address"
+            placeholder="Введіть адресу доставки"
+            minlength="5"
             required
           />
-        </label>
+          <input
+            type="tel"
+            id="phone"
+            class="modal-field-input"
+            placeholder="Введіть номер телефону"
+            minlength="10"
+            maxlength="15"
+            required
+          />
 
-        <p class="modal-price-text">
-          Всього: <span class="modal-price"></span> грн.
-        </p>
-
-        <input
-          type="text"
-          class="modal-field-input"
-          id="address"
-          placeholder="Введіть адресу доставки"
-          required
-        />
-        <input
-          type="text"
-          id="phone"
-          class="modal-field-input"
-          placeholder="Введіть номер телефону"
-          required
-        />
-
-        <button class="modal-form-button">Оформити</button>
-      </form>
+          <button class="modal-form-button">Оформити</button>
+        </form>
+      </div>
     </div>
 
     <div class="modal-form-container" id="success-modal">

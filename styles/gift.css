@@ -85,6 +85,10 @@ main {
   display: none;
 }
 
+.modal-form-container2 {
+  position: relative;
+}
+
 .modal-form {
   position: relative;
   background-color: #ebed4d;

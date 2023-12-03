@@ -32,16 +32,46 @@ document.addEventListener("DOMContentLoaded", function () {
   const successModal = document.getElementById("success-modal");
 
   // Отримуємо елементи DOM для подальших взаємодій
-  const number = document.getElementById("number").textContent;
-  const generalPrice = document.querySelector(".modal-price");
-  const address = document.getElementById("address").textContent;
-  const phone = document.getElementById("phone").textContent;
+  const phone = document.getElementById("phone");
+
+  phone.addEventListener("input", function (event) {
+    const inputValue = event.target.value;
+
+    // Регулярний вираз для перевірки, чи введені лише цифри та деякі додаткові символи
+    const validCharactersRegex = /^[0-9+]*$/;
+
+    if (!validCharactersRegex.test(inputValue)) {
+      // Видаліть останній введений символ, який не відповідає правилам
+      event.target.value = inputValue.slice(0, -1);
+    }
+
+    // Перевірка на максимальну довжину номеру телефону
+    if (inputValue.length > 15) {
+      // Обрізаємо значення, якщо воно занадто довге
+      event.target.value = inputValue.slice(0, 15);
+    }
+  });
+
+  const numberInput = document.querySelector("#number");
+  const priceOne = parseFloat(
+    document.querySelector(".gift-price").textContent
+  );
+  document.querySelector(".modal-price").textContent = (
+    numberInput.value * priceOne
+  ).toFixed(2);
+
+  // Додаємо обробник подій для елементу вводу кількості
+  numberInput.addEventListener("input", function () {
+    const quantity = parseFloat(numberInput.value) || 0;
+    const totalPrice = (quantity * priceOne).toFixed(2);
+    document.querySelector(".modal-price").textContent = totalPrice;
+  });
 
   // form
   const form = document.querySelector("#order-form");
-      form.addEventListener("submit", function (event) {
-        event.preventDefault();
-      });
+  form.addEventListener("submit", function (event) {
+    event.preventDefault();
+  });
 
   // Управління формою замовленя
   openButton.addEventListener("click", function () {
@@ -50,12 +80,40 @@ document.addEventListener("DOMContentLoaded", function () {
 
   closeOrderButton.addEventListener("click", function () {
     orderModal.style.display = "none";
+    form.reset();
   });
 
   // Управління формою успішного замовлення
   orderButton.addEventListener("click", function () {
-    if (number && address && phone) {
-      successModal.style.display = "flex";
+    const totalPrice = document.querySelector(".modal-price").textContent;
+    const number = document.querySelector("#number").value;
+    const address = document.getElementById("address").value;
+    const phone = document.getElementById("phone").value;
+    const giftName = document.querySelector(".gift-name").textContent;
+
+    if (number && address.length >= 5 && phone && phone.length >= 10) {
+      let orderData = {
+        name: giftName,
+        number: number,
+        address: address,
+        phone: phone,
+        price: totalPrice,
+      };
+
+      localStorage.setItem("order", JSON.stringify(orderData));
+      setTimeout(function () {
+        orderModal.style.display = "none";
+      }, 100);
+
+      setTimeout(function () {
+        successModal.style.display = "flex";
+      }, 2000);
+
+      setTimeout(function () {
+        successModal.style.display = "none";
+      }, 4000);
+
+      form.reset();
     }
   });
 
