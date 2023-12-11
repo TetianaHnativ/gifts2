@@ -68,15 +68,31 @@ form.addEventListener("submit", function (event) {
       event.preventDefault();
       message.textContent = "Паролі не збігаються!";
     } else {
-      let userData = {
-        surname: surname.value,
-        name: name.value,
-        phone: phone.value,
-        email: email.value,
-        password: password.value,
-      };
+      async function hashPassword(password) {
+        return crypto.subtle
+          .digest("SHA-256", new TextEncoder().encode(password))
+          .then((buffer) => {
+            const hashArray = Array.from(new Uint8Array(buffer));
+            return hashArray
+              .map((byte) => byte.toString(16).padStart(2, "0"))
+              .join("");
+          });
+      }
+      async function saveUserData() {
+        const hashedPassword = await hashPassword(password.value);
 
-      localStorage.setItem("user", JSON.stringify(userData));
+        let userData = {
+          surname: surname.value,
+          name: name.value,
+          phone: phone.value,
+          email: email.value,
+          password: hashedPassword,
+        };
+
+        localStorage.setItem("user", JSON.stringify(userData));
+      }
+      saveUserData();
+      alert("Ви успішно зареєструвалися!");
     }
   }
 });

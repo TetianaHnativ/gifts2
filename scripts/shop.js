@@ -1,6 +1,5 @@
 const giftsList = document.querySelector(".gifts-list");
 const gifts = document.querySelectorAll(".gifts-list-item");
-//const buttons = document.querySelectorAll(".shop-button");
 
 const filterGifts = (filter) => {
   gifts.forEach((gift) => {

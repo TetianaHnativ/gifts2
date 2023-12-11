@@ -94,9 +94,15 @@ main {
   display: flex;
   flex-direction: column;
   gap: 5px;
-  padding-bottom: 5px;
   max-width: 300px;
   border-radius: 10px;
+}
+
+.gifts-list-item a {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  padding-bottom: 5px;
 }
 
 .gift-img {

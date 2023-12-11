@@ -50,3 +50,14 @@ main {
 .registration-link {
   color: #038cff;
 }
+
+.message {
+  max-width: 500px;
+  text-align: center;
+  font-size: 15px;
+  color:red;
+}
+
+.logout {
+  background-color: red;
+}

@@ -15,8 +15,6 @@ document.addEventListener("DOMContentLoaded", function () {
     document.querySelector(".gift-category").textContent =
       selectedGift.category;
     document.querySelector(".gift-price").textContent = selectedGift.price;
-
-    // Очистіть дані у localStorage після використання, якщо потрібно
     //localStorage.removeItem("selectedGift");
   }
 });
@@ -30,6 +28,9 @@ document.addEventListener("DOMContentLoaded", function () {
   const closeSuccessButton = document.querySelector(".success-close");
   const orderButton = document.querySelector(".modal-form-button");
   const successModal = document.getElementById("success-modal");
+  const closeMessageButton = document.querySelector(".message-close");
+  const messageModal = document.getElementById("message-modal");
+  const userLogIn = localStorage.getItem("userLogin");
 
   // Отримуємо елементи DOM для подальших взаємодій
   const phone = document.getElementById("phone");
@@ -75,7 +76,17 @@ document.addEventListener("DOMContentLoaded", function () {
 
   // Управління формою замовленя
   openButton.addEventListener("click", function () {
-    orderModal.style.display = "flex";
+    if (userLogIn) {
+      orderModal.style.display = "flex";
+    } else {
+      setTimeout(function () {
+        messageModal.style.display = "flex";
+      }, 2000);
+
+      setTimeout(function () {
+        messageModal.style.display = "none";
+      }, 6000);
+    }
   });
 
   closeOrderButton.addEventListener("click", function () {
@@ -90,14 +101,19 @@ document.addEventListener("DOMContentLoaded", function () {
     const address = document.getElementById("address").value;
     const phone = document.getElementById("phone").value;
     const giftName = document.querySelector(".gift-name").textContent;
-
+    const giftCategory = document.querySelector(".gift-category").textContent;
+    const user = JSON.parse(userLogIn);
     if (number && address.length >= 5 && phone.length >= 10) {
+      const randomNum = Math.floor(Math.random() * 100) + 1;
       let orderData = {
+        id: randomNum,
         name: giftName,
+        category: giftCategory,
         number: number,
         address: address,
         phone: phone,
         price: totalPrice,
+        user: user.login,
       };
 
       localStorage.setItem("order", JSON.stringify(orderData));
@@ -119,5 +135,9 @@ document.addEventListener("DOMContentLoaded", function () {
 
   closeSuccessButton.addEventListener("click", function () {
     successModal.style.display = "none";
+  });
+
+  closeMessageButton.addEventListener("click", function () {
+    messageModal.style.display = "none";
   });
 });
